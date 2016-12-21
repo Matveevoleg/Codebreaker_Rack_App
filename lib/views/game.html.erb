@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Codebreaker</title>
+  <link rel="stylesheet" href="/stylesheets/application.css" type="text/css">
+</head>
+<body>
+<div id="container">
+    <table class="t-game">
+      <tr>
+        <td  class="td-game" colspan="3">
+          Player: <%=name%>
+        </td>
+      </tr>
+      <tr>
+        <td class="td-game">Hints: <%=game.hints%> </td>
+        <td></td>
+        <td  class="td-game">Attempts: <%=game.attempts%></td>
+      </tr>
+      <tr>
+        <td colspan="3" class="td-game">
+        <%if hint%>
+            <%=hint%>
+        <%end%>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3"  class="td-game">
+          <form method="post" action="/input">
+            <input name="input" type="text">
+            <input type="submit" value="Check">
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td  colspan="3" class="td-game">
+          <%if answer%>
+             <%=answer%>
+          <%end%>
+        </td>
+      </tr>
+      <tr>
+        <td  class="td-game">
+          <form method="post" action="/get_hint">
+            <input type="submit" value="Get hint">
+          </form>
+        </td >
+        <td  class="td-game">
+          <form method="post" action="/start">
+            <input type="submit" value="Restart">
+          </form>
+        </td>
+        <td  class="td-game">
+          <form method="post" action="/">
+            <input type="submit" value="Exit">
+          </form>
+        </td >
+      </tr>
+    </table>
+</div>
+</body>
+</html>

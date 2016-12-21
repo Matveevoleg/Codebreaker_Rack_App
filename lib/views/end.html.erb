@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Codebreaker</title>
+  <link rel="stylesheet" href="/stylesheets/application.css" type="text/css">
+</head>
+<body>
+<div id="container">
+  <div class="tab">
+    <h1> You <%=answer%></h1>
+    <%if(answer=='lose')%>
+        <p>The secret code was: <%=game.secret_code%></p>
+    <%end%>
+  <form method="post" action="/start">
+    <input type="submit" value="Play again">
+  </form>
+    <form method="post" action="/">
+      <input type="submit" value="Exit">
+    </form>
+  </div>
+  <div class="tab">
+    <h1> Statistics </h1>
+  </div>
+  <table class="statistics">
+    <tr>
+      <th>Name</th>
+      <th>Hints</th>
+      <th>Attempts</th>
+    </tr>
+    <% statistics.each do |line| %>
+        <% data=line.split('|')%>
+        <tr class="statistics-td">
+          <td class="statistics-td"><%= data[0] %></td>
+          <td class="statistics-td"><%= data[1] %></td>
+          <td class="statistics-td"><%= data[2] %></td>
+        </tr>
+    <%end%>
+  </table>
+</div>
+</body>
+</html>
