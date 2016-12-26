@@ -8,24 +8,23 @@
 <div id="container">
     <table class="t-game">
       <tr>
-        <td  class="td-game" colspan="3">
+        <td  class="td-game" colspan="2">
           Player: <%=name%>
         </td>
       </tr>
       <tr>
         <td class="td-game">Hints: <%=game.hints%> </td>
-        <td></td>
         <td  class="td-game">Attempts: <%=game.attempts%></td>
       </tr>
       <tr>
-        <td colspan="3" class="td-game">
+        <td colspan="2" class="td-game">
         <%if hint%>
             <%=hint%>
         <%end%>
         </td>
       </tr>
       <tr>
-        <td colspan="3"  class="td-game">
+        <td colspan="2"  class="td-game">
           <form method="post" action="/input">
             <input name="input" type="text">
             <input type="submit" value="Check">
@@ -33,27 +32,23 @@
         </td>
       </tr>
       <tr>
-        <td  colspan="3" class="td-game">
+        <td  colspan="2" class="td-game">
           <%if answer%>
              <%=answer%>
           <%end%>
         </td>
       </tr>
       <tr>
-        <td  class="td-game">
-          <form method="post" action="/get_hint">
-            <input type="submit" value="Get hint">
-          </form>
+        <td  colspan="2" class="td-game">
+          <span class="btn1"><a href="/get_hint">Get hint</a></span>
         </td >
+      </tr>
+      <tr>
         <td  class="td-game">
-          <form method="post" action="/start">
-            <input type="submit" value="Restart">
-          </form>
+          <span class="btn1"><a href="/start">Restart</a></span>
         </td>
-        <td  class="td-game">
-          <form method="post" action="/">
-            <input type="submit" value="Exit">
-          </form>
+        <td class="td-game">
+          <span class="btn1"><a href="/">Exit</a></span>
         </td >
       </tr>
     </table>

@@ -37,12 +37,9 @@ class Racker
 
   def save_data
     game.save(name)
-    Rack::Response.new(render('end.html.erb'))
   end
 
   def end_game
-    param = @request.params
-    return start if param == 'yes'
     Rack::Response.new(render('index.html.erb'))
   end
 

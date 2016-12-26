@@ -46,6 +46,18 @@ th {
 
 .td-game {
     padding: 3px;
-    /*border: 1px solid black;*/
     text-align: center;
 }
+
+.btn1 {
+    padding-top : 7px;
+    padding-bottom : 10px;
+}
+.btn1 a {
+    display : block;
+    height : 30px;
+    text-align : center;
+    color: black;
+    margin: auto;
+}
+

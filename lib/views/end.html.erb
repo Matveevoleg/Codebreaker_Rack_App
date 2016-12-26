@@ -11,12 +11,12 @@
     <%if(answer=='lose')%>
         <p>The secret code was: <%=game.secret_code%></p>
     <%end%>
-  <form method="post" action="/start">
-    <input type="submit" value="Play again">
-  </form>
-    <form method="post" action="/">
-      <input type="submit" value="Exit">
-    </form>
+    <h3>
+      <span class="btn1"><a style="color:green" href="/start">Play again</a></span>
+    </h3>
+    <h5>
+      <span class="btn1"><a href="/">Exit</a></span>
+    </h5>
   </div>
   <div class="tab">
     <h1> Statistics </h1>

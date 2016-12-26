@@ -1,9 +1,10 @@
 Oleg|0|1
-Oleg|0|0
+Oleg|1|0
 Oleg|0|3
 Oleg|0|3
 Oleg|0|2
 Oleg|0|1
-test|0|2
-test|0|2
-test|0|0
+Oleg|2|3
+Oleg|2|4
+Oleg|0|0
+Test|0|0
