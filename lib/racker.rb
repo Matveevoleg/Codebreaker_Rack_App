@@ -20,6 +20,7 @@ class Racker
 
   def response
     case @request.path
+      when '/'            then index_page
       when '/start'       then start
       when '/get_hint'    then get_hint
       when '/input'       then check_input
@@ -39,7 +40,7 @@ class Racker
     game.save(name)
   end
 
-  def end_game
+  def index_page
     Rack::Response.new(render('index.html.erb'))
   end
 
